@@ -1,0 +1,49 @@
+body{
+    margin: 1%;
+    padding:1%;
+    background-color: rgba(0,0,255,.2);
+    font-family: "Times New Roman", serif;
+
+}
+.container{
+    margin-left: 0;
+    margin-right: 0;
+}
+section{
+    margin:1%;
+    padding:1%;
+}
+nav a{
+    display:block;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 35px;
+    text-decoration: none;
+    padding: 2%;
+    margin: 1%;
+}
+.myClass{
+    margin: 0em 1em;
+    padding:.75em;
+    border: 1px solid black;
+    border-radius: .25%;
+}
+@media only screen and (min-width: 900px){
+    header h1:after{
+        content: "(I guess...)"
+    }
+}
+img{
+    display: inline-block;
+    width: 20%;
+    padding:1%;
+    margin: 1%;
+}
+ol{
+    list-style:upper-roman;
+}
+footer{
+    clear: both;
+    text-transform: uppercase;
+}
