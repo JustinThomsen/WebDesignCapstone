@@ -118,7 +118,9 @@ a {
     transition: all .5s ease;
     text-align: center;
 }
-
+ul li{
+    text-transform: uppercase;
+}
 .active {
     background: white;
     color: black;
@@ -158,6 +160,7 @@ li {
     text-decoration: underline;
     padding: 0;
     box-shadow: none;
+    text-transform: lowercase;
 }
 
 /* example iPhone type design tweaking for single columns */
@@ -174,11 +177,9 @@ li {
         justify-content: space-between;
         margin-bottom: .2em;
     }
-
     .two-col li {
         font-size: .85em;
     }
-
     h1 {
         text-align: center;
         font-size: 3em;
@@ -202,7 +203,6 @@ li {
         margin: 1em auto;
         text-align: center;
     }
-
     h2 {
         font-weight: 300;
         font-size: 2em;
@@ -215,5 +215,6 @@ li {
     }
     .override{
         margin: auto;
+        text-transform: lowercase;
     }
 }
