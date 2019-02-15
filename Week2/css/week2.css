@@ -4,8 +4,7 @@
 }
 body{
     min-width: 480px;
-    background-image: url("../img/beltbackground.png");
-    background-repeat: repeat-y;
+    background: url("../img/beltbackground.png") repeat-y;
 }
 
 /* simple use of flex-box to create layout from <div> "grouping" tags. The key is to remember that your CSS layout solution has everything to do with the decisions you make in the HTML  */
@@ -159,7 +158,7 @@ li {
     background-color: #ffffff;
     color: #212529;
     margin: 0;
-    text-decoration: underline;
+    /*text-decoration: underline*/;
     padding: 0;
     box-shadow: none;
     text-transform: lowercase;
@@ -167,7 +166,15 @@ li {
 .card{
     margin-top: .5em;
 }
+.card-title{
+    text-align: center;
+    margin: 0;
+    border-bottom: solid #000000;
+}
 
+.experiences{
+    text-align: center;
+}
 /* example iPhone type design tweaking for single columns */
 
 @media only screen and (max-width: 768px) {
