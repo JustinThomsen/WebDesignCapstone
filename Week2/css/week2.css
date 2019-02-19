@@ -7,9 +7,9 @@ body{
     min-width: 480px;
     background: url("../img/beltbackground.png") repeat-y;
     background-color: black;
+    padding-bottom: 7em;
 }
 
-/* simple use of flex-box to create layout from <div> "grouping" tags. The key is to remember that your CSS layout solution has everything to do with the decisions you make in the HTML  */
 article,
 .two-col {
     display: flex;
@@ -21,6 +21,7 @@ article {
     padding: 5%;
     display: flex;
 }
+
 .sticky{
     position: sticky;
     top: 10em;
@@ -39,13 +40,15 @@ header {
     font-size: medium;
     line-height: .5em;
 }
+
 .two-col section {
     flex: 1;
-    /*better than declaring width if you require equal columns*/
 }
 
-/* example layout mediaquery */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
+    body{
+        padding-bottom: 10em;
+    }
     article,
     .two-col {
         flex-direction: column;
@@ -104,7 +107,6 @@ h3 {
     padding-right: .5em;
     font-weight: 400;
     font-size: .8em;
-    /*  flexbox is handy here too  */
     display: flex;
     justify-content: space-between;
     align-items: center
@@ -180,7 +182,6 @@ li {
     background-color: #ffffff;
     color: #212529;
     margin: 0;
-    /*text-decoration: underline*/;
     padding: 0;
     box-shadow: none;
     text-transform: lowercase;
@@ -199,10 +200,8 @@ li {
 .experiences{
     text-align: center;
 }
-/* example iPhone type design tweaking for single columns */
 
-@media only screen and (max-width: 768px) {
-    /* A fun CSS hack to convert list of skills to comma separated paragraph.   */
+@media only screen and (max-width: 1280px) {
     .two-col ul li {display: inline;}
     .two-col ul li:after {content: ","}
     .two-col ul li:last-child:after {content: "."}
@@ -212,7 +211,9 @@ li {
         justify-content: space-between;
         margin-bottom: .2em;
     }
-
+    .two-col section:first-child {
+        margin-right: 0;
+    }
     .two-col li {
         font-size: 1em;
     }
@@ -260,7 +261,6 @@ li {
         text-transform: lowercase;
     }
     #skills{
-        padding-bottom: 3em;
         text-transform: none;
     }
 }
