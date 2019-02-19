@@ -6,6 +6,7 @@
 body{
     min-width: 480px;
     background: url("../img/beltbackground.png") repeat-y;
+    background-color: black;
 }
 
 /* simple use of flex-box to create layout from <div> "grouping" tags. The key is to remember that your CSS layout solution has everything to do with the decisions you make in the HTML  */
@@ -22,7 +23,8 @@ article {
 }
 .sticky{
     position: sticky;
-    top: 4em;
+    top: 10em;
+    width: 400px;
 }
 
 header {
@@ -32,6 +34,11 @@ header {
 
 }
 
+#skills li{
+    text-transform: none;
+    font-size: medium;
+    line-height: .5em;
+}
 .two-col section {
     flex: 1;
     /*better than declaring width if you require equal columns*/
@@ -51,12 +58,15 @@ header {
         margin: 0;
         padding: 0;
     }
+    .sticky{
+        width: auto;
+    }
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin-top: 0;
     font-weight: 300;
 }
@@ -77,6 +87,7 @@ header p {
 h1 {
     font-weight: 300;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h2 {
@@ -105,7 +116,7 @@ h3 strong {
 
 p,
 li {
-    font-family: Georgia;
+    font-family: Georgia, sans-serif;
 }
 
 p {
@@ -113,7 +124,7 @@ p {
 }
 
 a {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -144,10 +155,6 @@ a:hover {
     box-shadow: inset 0 0 0 4px #5a6268, 0 0 0 1px #5a6268;
 }
 
-ol{
-    margin-right: 2%;
-}
-
 ol,
 ul {
     list-style-type: none;
@@ -161,7 +168,7 @@ li {
     margin-bottom: 1em;
 }
 
-.two-col section:first-child h2 {
+.two-col section:first-child {
     margin-right: 2%;
 }
 
@@ -207,7 +214,7 @@ li {
     }
 
     .two-col li {
-        font-size: .85em;
+        font-size: 1em;
     }
 
     h1 {
@@ -254,5 +261,6 @@ li {
     }
     #skills{
         padding-bottom: 3em;
+        text-transform: none;
     }
 }
