@@ -25,20 +25,52 @@
 		</div>
 	</header>
 
-	<div class="one-col">
+	<div class="col-12 col-sm-8">
 		<section>
 			<div class="card">
 				<h2 class="card-title"><strong>Family</strong></h2>
-				<ul class="card-body">
-					<li><strong>Led multiple digital transformations (John Deere, Budcat, Medix)</strong></li>
-					<li><strong>Experienced leader in DevOps</strong></li>
-					<li><strong>Experienced leader in software development</strong></li>
-					<li><strong>Built a dojo experience from the ground up</strong></li>
-					<li><strong>Over a decade of experience managing a technical workforce</strong></li>
-					<li><strong>Experienced manager of managers</strong></li>
-					<li><strong>Certified Scrum Master</strong></li>
-					<li><strong>Experience managing a remote workforce in India/Mexico</strong></li>
-				</ul>
+				<div class="card-body">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active">
+								<img class="d-block img-fluid" src="img/uthappizza.png" alt="Tuffy">
+								<div class="carousel-caption d-none d-md-block">
+									<h2>Tuffy <span class="badge badge-danger">JRT</span></h2>
+									<p class="d-none d-sm-block">Jack Russell Terrier who incorrectly believes he is the alpha of the pack.</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block img-fluid" src="img/buffet.png" alt="Diesel">
+								<div class="carousel-caption d-none d-md-block">
+									<h2>Diesel <span class="badge badge-danger">Dogo</span></h2>
+									<p class="d-none d-sm-block">Dogo Argentino with a heart of gold.  A real old soul (and old dog ;-) )</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block img-fluid" src="img/alberto.png" alt="Erin">
+								<div class="carousel-caption d-none d-md-block">
+									<h2>Erin</h2>
+									<h4>Executive Wife</h4>
+									<p class="d-none d-sm-block">Award winning wife of the year (annual award presented by me)</p>
+								</div>
+							</div>
+						</div>
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</a>
+						<button class="btn btn-danger btn-sm" id="carouselButton">
+							<span class="fa fa-pause"></span>
+						</button>
+					</div>
+				</div>
 			</div>
 			<div class="card">
 				<h2 class="card-title"><strong>WORK EXPERIENCE</strong></h2>
