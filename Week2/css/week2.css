@@ -265,19 +265,26 @@ li {
     }
 }
 
-.carousel {
-    background: #5a6268; }
+.carousel{
+    text-shadow: none;
+}
 
 .carousel-item {
-    height: 300px;
-    background: #5a6268; }
+    height: 325px;
+    background: #6c757d;
+}
 
 .carousel-caption{
-    text-outline: black 1px;
+    top:0;
+    bottom: auto;
+    right:4em;
+    left: auto;
 }
+
 .carousel-indicators{
     background: transparent;
 }
+
 .carousel-control .active {
     color: #1b1e21;
     background: #1b1e21;
@@ -287,12 +294,14 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 300px; }
+    min-height: 300px;
+}
 
 #carouselButton {
-    right: 0px;
+    right: 0;
     position: absolute;
-    bottom: 0px; }
+    bottom: 0;
+}
 
 .carousel a{
     margin: 0;
@@ -301,9 +310,45 @@ li {
 }
 
 .carousel h2{
-    background: #bababa;
-    opacity: .5;
+    background: rgba(155,155,155,.3);
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #16181b;
     font-family: "Arial", sans-serif;
+}
 
-    filter: alpha(opacity=1);
+.carousel h4{
+    background: rgba(200,200,200,.3);
+    text-shadow: none;
+    color: #16181b;
+}
+
+.carousel p{
+    background: rgba(255,255,255,.4);
+    color: #16181b;
+}
+
+.aboutme{
+    font-size: medium;
+}
+
+#aboutMeOrderedList{
+    list-style-type: decimal;
+}
+
+#aboutMeCard{
+    width: 10%;
+    align-self: center;
+
+}
+
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
 }
