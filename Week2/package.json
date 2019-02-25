@@ -9,9 +9,11 @@
     "lite": "lite-server",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copycss": "copyfiles -f css/*.css dist/css",
     "imagemin": "imagemin img/* --out-dir dist/img",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin aboutme.html -d dist --htmlmin -o dist/aboutme.html && usemin references.html -d dist --htmlmin -o dist/references.html",
-    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
+    "deploy": "copyfiles -u 1 dist/* ../../justinthomsen.github.io/dist && copyfiles -u 2 dist/css/* ../../justinthomsen.github.io/dist/css && copyfiles -u 2 dist/img/* ../../justinthomsen.github.io/dist/img && copyfiles -u 1 js/* ../../justinthomsen.github.io/dist/js && copyfiles -u 2 dist/fonts/* ../../justinthomsen.github.io/dist/fonts",
+    "build": "npm run clean && npm run copyfonts && npm run copycss && npm run imagemin && npm run usemin"
   },
   "author": "",
   "license": "ISC",
