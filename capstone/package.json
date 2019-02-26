@@ -6,7 +6,14 @@
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copycss": "copyfiles -f css/*.css dist/css",
+    "imagemin": "imagemin img/* --out-dir dist/img",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin aboutme.html -d dist --htmlmin -o dist/aboutme.html && usemin references.html -d dist --htmlmin -o dist/references.html",
+    "deploy": "copyfiles -u 1 dist/* ../../justinthomsen.github.io/dist && copyfiles -u 2 dist/css/* ../../justinthomsen.github.io/dist/css && copyfiles -u 2 dist/img/* ../../justinthomsen.github.io/dist/img && copyfiles -u 1 js/* ../../justinthomsen.github.io/dist/js && copyfiles -u 2 dist/fonts/* ../../justinthomsen.github.io/dist/fonts",
+    "build": "npm run clean && npm run copyfonts && npm run copycss && npm run imagemin && npm run usemin"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +24,14 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "bootstrap-social": "^5.1.1",
+    "copyfiles": "^2.1.0",
     "font-awesome": "^4.7.0",
+    "imagemin": "^6.1.0",
+    "imagemin-cli": "^4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "rimraf": "^2.6.3",
+    "usemin": "^0.5.0",
+    "usemin-cli": "^0.5.1"
   }
 }
