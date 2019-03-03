@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#myCarousel').carousel({interval: 2000});
+    $('#myCarousel').carousel({interval: 4000});
     $('#carouselButton').click(function () {
         if ($('#carouselButton').children('span').hasClass('fa-pause')) {
             $('#myCarousel').carousel('pause');
